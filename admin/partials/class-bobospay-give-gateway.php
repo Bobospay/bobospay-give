@@ -15,9 +15,6 @@ use Give\Framework\PaymentGateways\PaymentGateway;
  */
 class Bobospay_Give_Gateway extends PaymentGateway
 {
-    private $client_id;
-    private $client_secret;
-    private $encryption_key;
     /**
      * @inheritDoc
      */
@@ -28,12 +25,12 @@ class Bobospay_Give_Gateway extends PaymentGateway
     private function setup_credentials()
     {
         $credentials = bobospay_give_get_credentials();
-        $this->client_id = $credentials['client_id'];
-        $this->client_secret = $credentials['client_secret'];
-        $this->encryption_key = $credentials['encryption_key'];
+        $client_id = $credentials['client_id'];
+        $client_secret = $credentials['client_secret'];
+        $encryption_key = $credentials['encryption_key'];
 
-        \Bobospay\Bobospay::setClientId($this->client_id);
-        \Bobospay\Bobospay::setClientSecret($this->client_secret);
+        \Bobospay\Bobospay::setClientId($client_id);
+        \Bobospay\Bobospay::setClientSecret($client_secret);
         \Bobospay\Bobospay::setEnvironment(bobospay_give_get_environment());
     }
 
@@ -42,7 +39,7 @@ class Bobospay_Give_Gateway extends PaymentGateway
      */
     public static function id(): string
     {
-        return 'bobospay';
+        return 'bobospay_give';
     }
 
     /**

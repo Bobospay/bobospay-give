@@ -106,7 +106,7 @@ class Bobospay_Give_Admin {
     }
 
     public function setup_gateway_settings() {
-        GiveBobospayGatewaySettings::get_instance()->setup_hooks();
+        Bobospay_Give_Gateway_Settings::get_instance()->setup_hooks();
     }
 
 }

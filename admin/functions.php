@@ -4,28 +4,28 @@ function bobospay_give_get_credentials(): array
 {
     if (give_is_test_mode()) {
         return array(
-            'client_id' => give_get_option('bobospay_sandbox_client_id', ''),
-            'client_secret' => give_get_option('bobospay_sandbox_client_secret', ''),
-            'encryption_key' => give_get_option('bobospay_sandbox_encryption_key', ''),
+            'client_id' => give_get_option('bobospay_give_sandbox_client_id', ''),
+            'client_secret' => give_get_option('bobospay_give_sandbox_client_secret', ''),
+            'encryption_key' => give_get_option('bobospay_give_sandbox_encryption_key', ''),
         );
     }
     return array(
-        'client_id' => give_get_option('bobospay_live_client_id', ''),
-        'client_secret' => give_get_option('bobospay_live_client_secret', ''),
-        'encryption_key' => give_get_option('bobospay_live_encryption_key', ''),
+        'client_id' => give_get_option('bobospay_give_live_client_id', ''),
+        'client_secret' => give_get_option('bobospay_give_live_client_secret', ''),
+        'encryption_key' => give_get_option('bobospay_give_live_encryption_key', ''),
     );
 }
 
 function bobospay_give_has_credentials(): bool
 {
     if (give_is_test_mode()) {
-        return !empty(give_get_option('bobospay_sandbox_client_id', ''))
-            && !empty(give_get_option('bobospay_sandbox_client_secret', ''))
-            && !empty(give_get_option('bobospay_sandbox_encryption_key', ''));
+        return !empty(give_get_option('bobospay_give_sandbox_client_id', ''))
+            && !empty(give_get_option('bobospay_give_sandbox_client_secret', ''))
+            && !empty(give_get_option('bobospay_give_sandbox_encryption_key', ''));
     }
-    return !empty(give_get_option('bobospay_live_client_id', ''))
-        && !empty(give_get_option('bobospay_live_client_secret', ''))
-        && !empty(give_get_option('bobospay_live_encryption_key', ''));
+    return !empty(give_get_option('bobospay_give_live_client_id', ''))
+        && !empty(give_get_option('bobospay_give_live_client_secret', ''))
+        && !empty(give_get_option('bobospay_give_live_encryption_key', ''));
 }
 
 function bobospay_give_get_environment(): string
