@@ -34,7 +34,7 @@ class BobospayGiveBillingFields
                     <p style="text-align: center;"><b>%2$s</b> %3$s</p>
                 </fieldset>
                 ',
-                esc_html__('Make your donation quickly and securely with PayPal', 'bobospay-give'),
+                esc_html__('Make your donation quickly and securely with Bobospay', 'bobospay-give'),
                 esc_html__('How it works:', 'bobospay-give'),
                 esc_html__(
                     'You will be redirected to Bobospay to complete your donation with your debit card, credit card, mobile money or with your Bobospay account. Once complete, you will be redirected back to this site to view your receipt.',
